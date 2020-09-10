@@ -27,9 +27,9 @@
 
 ## Wireframes
 
-* Desktop design
+* Desktop design - https://github.com/littlemonkee/Milestone-Project-3/blob/master/Wireframes/Wireframe-Desktop.jpg
 
-* Mobile design
+* Mobile design - https://github.com/littlemonkee/Milestone-Project-3/blob/master/Wireframes/Wireframe-Mobile.jpg
 
 
 ## Technolgies Used
