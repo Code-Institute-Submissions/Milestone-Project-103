@@ -1,39 +1,53 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+## Milestone Project 3 - Data Centric Development
 
-Welcome USER_NAME,
+# Recipe Book for Healthy Snacks and Treats
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project.
+#### This is an online recipe book with recipes for drinks, sweet snacks and savoury snacks aimed at people who are following a healthy diet or fitness plan.
 
-## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
+## User Stories
 
-A blue button should appear to click: *Make Public*,
+### Site Owner
 
-Another blue button should appear to click: *Open Browser*.
+#### As the Site Owner I want to be able to upload recipes to my site so that I can share them with my friends.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+##### (Potential methods of categorising recipes are: drinks, savoury snacks, sweet snacks, amount of time needed to make the recipe,...
 
-A blue button should appear to click: *Make Public*,
+### Site Users
 
-Another blue button should appear to click: *Open Browser*.
+#### As a Site User I want to be able to view recipes in a way that helps me decide which recipe I fancy making, e.g. something sweet or something savory.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the backend lessons.
+#### As a Site User I want to be able to search for recipes, perhaps by filtering out drinks or filtering on categorised lengths of time needed to prepare the recipes.
 
-## Updates Since The Instructional Video
+#### As a Site User I want to see a picture of the recipe to help me decide whether I like the look of it.
 
-We continually tweak and adjust this template to help give you the best experience. Here are the updates since the original video was made:
+#### As a Site User I want the site to be easy to use, in particular I want it to be mobile or tablet friendly so that I can easily access it when I am in my kitchen.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+## Wireframes
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### Desktop design
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### Mobile design
 
---------
 
-Happy coding!
+## Technolgies Used
+
+### Languages
+
+#### HTML5
+#### CSS
+#### Python
+#### Javascript and JQuery
+
+### Frameworks, Libraries and Programs
+
+#### Bootstrap and Font Awesome
+#### MongoDB
+#### Flask
+#### Google Fonts
+#### Git and Github
+#### MS Paint
+#### Heroku
+
