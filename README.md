@@ -27,27 +27,27 @@
 
 ## Wireframes
 
-### Desktop design
+* Desktop design
 
-### Mobile design
+* Mobile design
 
 
 ## Technolgies Used
 
 ### Languages
 
-#### HTML5
-#### CSS
-#### Python
-#### Javascript and JQuery
+* HTML5
+* CSS
+* Python
+* Javascript and JQuery
 
 ### Frameworks, Libraries and Programs
 
-#### Bootstrap and Font Awesome
-#### MongoDB
-#### Flask
-#### Google Fonts
-#### Git and Github
-#### MS Paint
-#### Heroku
+* Bootstrap and Font Awesome
+* MongoDB
+* Flask
+* Google Fonts
+* Git and Github
+* MS Paint
+* Heroku
 
