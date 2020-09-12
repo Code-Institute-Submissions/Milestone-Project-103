@@ -17,9 +17,12 @@ conn = mongo_connect(MONGODB_URI)
 
 coll = conn[DBS_NAME][COLLECTION_NAME]
 
+#new_doc = {'recipe_name':'test','yield':'Makes 10','equipment':'bowl'}
+
+#coll.remove(new_doc)
+
 documents = coll.find()
 
 for doc in documents: 
     print(doc)
 
-    
