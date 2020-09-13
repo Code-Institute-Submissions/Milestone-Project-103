@@ -1,0 +1,18 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+    <h1>
+    Test
+    </h1>
+        {% for recipe in recipes %}
+            {{recipe.recipe_name}}
+            {{recipe.yield}}
+            {{recipe.equipment}}
+            {{recipe.ingredients}}
+            {{recipe.method}}
+            {{recipe.image}}
+        {% endfor %}
+    </body>
+</html>
