@@ -51,3 +51,27 @@
 * MS Paint
 * Heroku
 
+
+## Testing
+
+### Testing Approach
+
+1. Setup database and test connection through addition and retrieval of some test data via IDE.
+2. Create Heroku app and test deployment.
+3. Build application in IDE, test each slice of functionality before deployment at regular intervals.
+4. Test responsiveness of app on various devices.
+5. Test app on end users.
+
+### Testing Results
+
+1. During work on my database connection I realised that my environment variables were automatically being removed from the .bashrc file in Gitpod when my Gitpod connection was closed.  
+After seeking advice on Slack I was directed to setting up an env.py file to hold these variables.  After creating the env.py file my database connection was stabilised. 
+The test results for adding and retrieving data from my MondoDB showed success after correcting my reference to the collection (realising that reference to the name was case sensitive).
+Test passed.
+
+2. I created my Heroku app and set it so that it would receive automatic deployments from my Github repo.  Unfortunately I followed the course materials and also logged into Heroku from my CLI.
+This resulted in all commits and pushes going directly to Heroku for one day rather than into Github.  After seeking advice on Slack I corrected this error, removing the Heroku remote.  
+I brought Github up to date with the work I had done (on 13/9/2020), re-testing where commits and pushes were going.  Heroku continued to update through automatic deployment from Github.
+Test passed.
+
+3. 
