@@ -11,7 +11,7 @@
     </div>
     <div class="row">   
         <div class="col-12">
-            <p>Type - {{recipe.yield}}</p>
+            <p>{{recipe.type}} recipe, {{recipe.yield}}</p>
         </div>
         <div class="col-12">
             <p>{{recipe.equipment}}</p>
@@ -26,10 +26,11 @@
             {% endfor %}
             </ul>
         </div>
-        <div class="section-image col-6">
+        <div class="col-6">
             <img src="{{recipe.image}}" alt="Recipe image">
-        </div>
+        </div> 
     </div>
+
     <div class="row">
         <div class="col-sm">
         <h3>Method</h3>

@@ -1,5 +1,4 @@
-/*  @import url('https://fonts.googleapis.com/css?family=Nunito:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700|Marck Script:100,200,300,400,500,600');*/
-@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Itim&display=swap');
 
 /*------------------------------------------Colours */
 
@@ -22,15 +21,15 @@ h2 {
     padding-right: 20px;
     padding-bottom: 10px;
 }
-/*
+
 h3 {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Electrolize', sans-serif;
     font-weight: 300;
     font-size: 20px;
     padding-left: 20px;
     padding-top: 20px;
 }
-
+/*
 h4 {
     font-family: 'Nunito', sans-serif;
     font-weight: 400;
@@ -54,12 +53,11 @@ h6 {
 
 /*------------------------------------------Section */
 
-.section-image {
-    max-width: 300px;
-    max-height: 300px;
+img {
+    width: 400px;
     padding-left: 20px;
     padding-right: 30px;
-    float: right;
+    /* float: right; */
 }
 
 .row {
@@ -67,7 +65,15 @@ h6 {
 }
 
 p {
-    font-size: 18px;
+    font-family: 'Electrolize', sans-serif;
+    font-size: 1em;
+    padding-left: 20px;
+}
+
+
+li {
+    font-family: 'Electrolize', sans-serif;
+    font-size: 1em;
 }
 
 /*------------------------------------------Footer */
