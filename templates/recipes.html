@@ -1,17 +1,45 @@
-<html>
-    <head>
-    </head>
-    <body>
-    <h1>
-    Test
-    </h1>
-        {% for recipe in recipes %}
-            {{recipe.recipe_name}}
-            {{recipe.yield}}
-            {{recipe.equipment}}
-            {{recipe.ingredients}}
-            {{recipe.method}}
-            {{recipe.image}}
-        {% endfor %}
-    </body>
-</html>
+{% extends 'base.html' %}
+{% block content %}
+    {% for recipe in recipes %}
+
+    <div class="row">
+        <div class="col">
+            <h2>
+                {{recipe.recipe_name}}
+            </h2>
+        </div>
+    </div>
+    <div class="row">   
+        <div class="col-12">
+            <p>Type - {{recipe.yield}}</p>
+        </div>
+        <div class="col-12">
+            <p>{{recipe.equipment}}</p>
+        </div>   
+    </div>
+    <div class="row">         
+        <div class="col-6">
+            <h3>Ingredients</h3>
+            <ul>
+            {% for ingredient in recipe.ingredients %}
+                <li>{{ingredient}}</li>
+            {% endfor %}
+            </ul>
+        </div>
+        <div class="section-image col-6">
+            <img src="{{recipe.image}}" alt="Recipe image">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm">
+        <h3>Method</h3>
+            <ol>
+            {% for method in recipe.method %}
+                <li>{{method}}</li>
+            {% endfor %}
+            </ol>
+        </div>
+    </div>
+
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,78 @@
+/*  @import url('https://fonts.googleapis.com/css?family=Nunito:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700|Marck Script:100,200,300,400,500,600');*/
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+/*------------------------------------------Colours */
+
+
+
+/*------------------------------------------Special text */
+
+h1 {
+    font-family: 'Itim', cursive;
+    font-weight: 300;
+    font-size: 36px;
+    padding-left: 0px;
+}
+
+h2 {
+    font-family: 'Itim', cursive;
+    font-weight: 300;
+    font-size: 28px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
+/*
+h3 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+h4 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    color: #245076;
+}
+
+h5,
+h6 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+}
+*/
+
+/*------------------------------------------Heading */
+
+
+
+/*------------------------------------------Navigation */
+
+
+
+/*------------------------------------------Section */
+
+.section-image {
+    max-width: 300px;
+    max-height: 300px;
+    padding-left: 20px;
+    padding-right: 30px;
+    float: right;
+}
+
+.row {
+    padding: 20px;
+}
+
+p {
+    font-size: 18px;
+}
+
+/*------------------------------------------Footer */
+
+
+
+/*------------------------------------------Media Queries */
+
