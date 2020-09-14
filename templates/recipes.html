@@ -2,23 +2,18 @@
 {% block content %}
     {% for recipe in recipes %}
 
+
     <div class="row">
-        <div class="col">
+        <div class="col-12">
             <h2>
                 {{recipe.recipe_name}}
             </h2>
         </div>
     </div>
-    <div class="row">   
-        <div class="col-12">
-            <p>{{recipe.type}} recipe, {{recipe.yield}}</p>
-        </div>
-        <div class="col-12">
-            <p>{{recipe.equipment}}</p>
-        </div>   
-    </div>
     <div class="row">         
         <div class="col-6">
+            <p>{{recipe.type}} recipe, {{recipe.yield}}</p>
+            <p>{{recipe.equipment}}</p> 
             <h3>Ingredients</h3>
             <ul>
             {% for ingredient in recipe.ingredients %}
@@ -41,6 +36,7 @@
             </ol>
         </div>
     </div>
+
 
 {% endfor %}
 {% endblock %}
