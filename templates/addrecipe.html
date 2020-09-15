@@ -1,38 +1,63 @@
 {% extends 'base.html' %}
 {% block content %}
 
-
         <h2>Add A Recipe</h2>
   
-            <form action="" method="POST" >
-                <div class="form-group">
-                    <label for="recipeName">Recipe name</label>
-                    <input type="text" class="form-control" id="recipeName" placeholder="Recipe name">
+            <form action="{{ url_for('insert_recipe') }}" method="POST" >
+                <div class="row">
+                    <div class="input-field add-recipe-field col-12">
+                        <label for="recipe_name">Recipe name</label>
+                        <input type="text" class="form-control" name="recipe_name" id="recipe_name" placeholder="Recipe name">
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="recipeType">Type (drink, sweet, savoury snack)</label>
-                    <input type="text" class="form-control" id="recipeType" placeholder="Recipe type">
+                <div class="row">
+                    <div class="dropdown add-recipe-field col-12">
+                        <label class="type-label" for="type">Type </label>
+
+                        <select class="btn-type col-12" id="type" name="type">
+                        <option value="" disabled selected>Select drink, sweet or savoury</option>
+
+                            {% for cat in categories %}
+                            <option value="{{cat.category_name}}">{{cat.category_name}}</option>
+                            {% endfor %}
+
+                        </select>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="recipeYield">Yield (number of servings)</label>
-                    <input type="text" class="form-control" id="recipeYield" placeholder="Number of servings">
+                <div class="row ">
+                    <div class="input-field add-recipe-field col-12">
+                        <label for="yield">Yield (number of servings)</label>
+                        <input type="text" class="form-control" name="yield" id="yield" placeholder="Number of servings">
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="recipeImplements">Implements required to make it</label>
-                    <input type="text" class="form-control" id="recipeImplements" placeholder="Implements required to make it">
+                <div class="row">
+                    <div class="input-field add-recipe-field col-12">
+                        <label for="equipment">Implements required to make it</label>
+                        <input type="text" class="form-control" name="equipment" id="equipment" placeholder="Implements required to make it">
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="recipeIngredients">Ingredients required to make it</label>
-                    <input type="text" class="form-control" id="recipeIngredients" placeholder="Method">
+                <div class="row">
+                    <div class="input-field add-recipe-field col-12">
+                        <label for="ingredients">Ingredients required to make it</label>
+                        <input type="text" class="form-control" name="ingredients" id="ingredients" placeholder="Ingredients">
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="recipeMethod"> Method</label>
-                    <input type="text" class="form-control" id="recipeMethod" placeholder="Method">
+                <div class="row">
+                    <div class="input-field add-recipe-field col-12">
+                        <label for="method"> Method</label>
+                        <input type="text" class="form-control" name="method" id="method" placeholder="Method">
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="recipeImage">Image link</label>
-                    <input type="text" class="form-control" id="recipeImage" placeholder="Recipe image">
+                <div class="row">
+                    <div class="input-field add-recipe-field col-12">
+                        <label for="image">Image link</label>
+                        <input type="text" class="form-control" name="image" id="image" placeholder="Recipe image">
+                    </div>
                 </div>
+                <div class="row">
+                    <button type="submit" class="btn btn-success">Submit <i class="far fa-paper-plane"></i></button>
+                </div>
+
             </form>
 
 

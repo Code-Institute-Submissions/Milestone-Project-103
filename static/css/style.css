@@ -83,7 +83,7 @@ a:hover {
 .main {
     margin-top: 30px;
     padding-top: 20px;
-    padding-left: 20px;
+    /* padding-left: 20px; */
     
 }
 
@@ -104,9 +104,30 @@ li {
     font-size: 1em;
 }
 
-/*------------------------------------------Form */
+/*------------------------------------------Forms */
 
+.add-recipe-field {
+    margin-bottom: 1rem;
+}
 
+.btn-type {
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+
+.type-label {
+    padding-right: 20px;
+}
+
+.btn-type:focus {
+    outline: -webkit-focus-ring-color auto 0px;
+}
 
 /*------------------------------------------Footer */
 
