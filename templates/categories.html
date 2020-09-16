@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="row">
+    <div class="col-12">
+        <h2>
+            Categories
+        </h2>
+    </div>
+
+    {% for category in categories %}
+    
+    <div class="col-12">
+        <p>{{category.category_name}}</p>
+    </div>  
+    <div class="col-12 edit-btn"> 
+        <a href="" class="btn btn-light">Edit category</a>
+        <a href="" class="btn btn-light">Delete category</a>
+    </div>
+     
+
+    {% endfor %}
+
+</div>
+
+
+{% endblock %}

@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
 
-        <h2>Add A Recipe</h2>
+        <h2>Edit A Recipe</h2>
   
-            <form action="{{ url_for('insert_recipe') }}" method="POST" >
+            <form action="{{ url_for('update_recipe', recipe_id=recipe._id) }}" method="POST" >
                 <div class="row">
                     <div class="input-field add-recipe-field col-12">
                         <label for="recipe_name">Recipe name</label>
-                        <input type="text" class="form-control" name="recipe_name" id="recipe_name" placeholder="Recipe name">
+                        <input type="text" class="form-control" name="recipe_name" id="recipe_name" placeholder="Recipe name" value="{{recipe.recipe_name}}">
                     </div>
                 </div>
                 <div class="row">
@@ -18,7 +18,11 @@
                         <option value="" disabled selected>Select drink, sweet or savoury</option>
 
                             {% for cat in categories %}
+                            {% if cat.category_name == recipe.category_name %} 
+                            <option value="{{cat.category_name}}" selected>{{cat.category_name}}</option>
+                            {% else %}
                             <option value="{{cat.category_name}}">{{cat.category_name}}</option>
+                            {% endif %}
                             {% endfor %}
 
                         </select>
@@ -27,21 +31,15 @@
                 <div class="row ">
                     <div class="input-field add-recipe-field col-12">
                         <label for="yield">Yield (number of servings)</label>
-                        <input type="text" class="form-control" name="yield" id="yield" placeholder="Number of servings">
+                        <input type="text" class="form-control" name="yield" id="yield" placeholder="Number of servings" value="{{recipe.yield}}">
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field add-recipe-field col-12">
                         <label for="equipment">Implements required to make it</label>
-                        <input type="text" class="form-control" name="equipment" id="equipment" placeholder="Implements required to make it">
+                        <input type="text" class="form-control" name="equipment" id="equipment" placeholder="Implements required to make it" value="{{recipe.equipment}}">
                     </div>
                 </div>
-                <!-- <div class="row">
-                    <div class="input-field add-recipe-field col-12">
-                        <label for="ingredients">Ingredients required to make it</label>
-                        <input type="text" class="form-control" name="ingredients" id="ingredients" placeholder="Ingredients">
-                    </div>
-                </div> -->
 
 
                 <div class="row">
@@ -51,7 +49,9 @@
                         <small class="left-pad">Press + or - to add or remove an ingredient</small>
                         <div class="controls" id="profs"> 
                             <form class="input-append">
-                                    <input autocomplete="off" class="input form-control2" id="ingredients1" name="ingredients[]" type="text" placeholder="Add ingredient" data-items="8"/><button id="b1" class="btn add-more" type="button">+</button>       
+                            {% for ingredient in recipe.ingredients %}
+                                    <input autocomplete="off" class="input form-control2" id="ingredients{{loop.index-1}}" name="ingredients[]" type="text" value="{{ingredient}}" data-items="8"/><button id="remove{{Key}}" class="btn btn-danger remove-me" >-</button>      
+                            {% endfor %}
                             </form>
                         </div>
                     </div>
@@ -67,11 +67,11 @@
                 <div class="row">
                     <div class="input-field add-recipe-field col-12">
                         <label for="image">Image link</label>
-                        <input type="text" class="form-control" name="image" id="image" placeholder="Recipe image">
+                        <input type="text" class="form-control" name="image" id="image" placeholder="Recipe image" value="{{recipe.image}}">
                     </div>
                 </div>
-                <div class="row">
-                    <button type="submit" class="btn btn-success">Submit <i class="far fa-paper-plane"></i></button>
+                <div class="row submit-changes-btn">
+                    <button type="submit" class="btn btn-success">Submit changes <i class="far fa-paper-plane"></i></button>
                 </div>
 
             </form>

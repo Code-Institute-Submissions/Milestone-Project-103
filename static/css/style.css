@@ -18,7 +18,7 @@ h1 {
 h2 {
     font-family: 'Itim', cursive;
     font-weight: 300;
-    font-size: 28px;
+    font-size: 32px;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 10px;
@@ -84,7 +84,7 @@ a:hover {
     margin-top: 30px;
     padding-top: 20px;
     /* padding-left: 20px; */
-    
+    padding-bottom: 50px;
 }
 
 img {
@@ -127,6 +127,40 @@ li {
 
 .btn-type:focus {
     outline: -webkit-focus-ring-color auto 0px;
+}
+
+.form-control2 {
+    display: inline-block;
+    width: 80%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.edit-btn {
+    padding-left: 30px;
+    padding-bottom: 20px;
+}
+
+.submit-changes-btn {
+    padding-left: 15px;
+    padding-bottom: 20px;
+}
+
+.btn-light {
+    color: #212529;
+    background-color: linen;
+    border-color: #f8f9fa;
+}
+
+.left-pad {
+    padding-left: 20px;
 }
 
 /*------------------------------------------Footer */
