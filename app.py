@@ -29,9 +29,11 @@ def add_recipe():
 def insert_recipe():
 
     ingredientslist = request.form.getlist('ingredients[]')
-    #ingredientslist.remove("")
+    if "" in ingredientslist:
+        ingredientslist.remove("")
     methodslist = request.form.getlist('methods[]')
-    #methodslist.remove("")
+    if "" in methodslist:
+        methodslist.remove("")
 
     recipes = mongo.db.Recipes
     recipe_name = request.form['recipe_name']
