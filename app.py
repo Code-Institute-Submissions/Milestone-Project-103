@@ -22,13 +22,36 @@ def get_recipes():
 @app.route('/add_recipe')
 def add_recipe():
     return render_template('addrecipe.html',
-    categories=mongo.db.Categories.find())
+        categories=mongo.db.Categories.find())
 
 
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
+
+    ingredientslist = request.form.getlist('ingredients[]')
+    #ingredientslist.remove("")
+    methodslist = request.form.getlist('methods[]')
+    #methodslist.remove("")
+
     recipes = mongo.db.Recipes
-    recipes.insert_one(request.form.to_dict())
+    recipe_name = request.form['recipe_name']
+    yields = request.form['yield']
+    category_name = request.form['category_name']
+    equipment = request.form['equipment']
+    ingredients = ingredientslist
+    methods = methodslist
+    image = request.form['image']
+
+    recipe_data = {
+        'recipe_name' : recipe_name,
+        'yield' : yields,
+        'category_name' : category_name,
+        'equipment' : equipment,
+        'ingredients' : ingredients,
+        'methods' : methods,
+        'image' : image
+    }
+    recipes.insert_one(recipe_data)
     return redirect(url_for('get_recipes'))
 
 
@@ -53,12 +76,12 @@ def update_recipe(recipe_id):
     })
     return redirect(url_for('get_recipes'))
 
- 
 
 @app.route('/delete_recipe/<recipe_id>')
 def delete_recipe(recipe_id):
     mongo.db.Recipes.remove({'_id': ObjectId(recipe_id)})
     return redirect(url_for('get_recipes'))
+
 
 @app.route('/get_categories')
 def get_categories():

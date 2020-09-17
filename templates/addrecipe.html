@@ -38,20 +38,26 @@
                 </div>
                 <div class="row">
                     <input type="hidden" name="count" value="1" />
-                    <div class="control-group add-recipe-field col-12" id="fields">
+                    <div class="control-group add-recipe-field col-12" id="ingredients">
                         <label class="control-label" for="ingredients1">Ingredients</label>
                         <small class="left-pad">Press + or - to add or remove an ingredient</small>
                         <div class="controls" id="profs"> 
-                            <form class="input-append">
+                            <div class="input-append">
                                     <input autocomplete="off" class="input form-control2" id="ingredients1" name="ingredients[]" type="text" placeholder="Add ingredient" data-items="8"/><button id="b1" class="btn add-more" type="button">+</button>       
-                            </form>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="input-field add-recipe-field col-12">
-                        <label for="method"> Method</label>
-                        <input type="text" class="form-control" name="method" id="method" placeholder="Method">
+                    <input type="hidden" name="count2" value="1" />
+                    <div class="control-group add-recipe-field col-12" id="methods">
+                        <label class="control-label" for="method1">Method</label>
+                        <small class="left-pad">Press + or - to add or remove a method</small>
+                        <div class="controls" id="profs2"> 
+                            <div class="input-append">
+                                    <input autocomplete="off" class="input form-control2" id="method1" name="methods[]" type="text" placeholder="Add method" data-items="8"/><button id="mb1" class="btn add-more2" type="button">+</button>       
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="row">

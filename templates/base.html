@@ -65,33 +65,15 @@
 
 
    <script>
-        /* $(document).ready(function(){
-        var next = 1;
-        $(".add-more").click(function(e){
-            e.preventDefault();
-            var addto = "#field" + next;
-            var addRemove = "#field" + (next);
-            next = next + 1;
-            var newIn = '<input autocomplete="off" class="input form-control2" id="field' + next + '" name="field' + next + '" type="text">';
-            var newInput = $(newIn);
-            var removeBtn = '<button id="remove' + (next - 1) + '" class="btn btn-danger remove-me" >-</button></div><div id="field">';
-            var removeButton = $(removeBtn);
-            $(addto).after(newInput);
-            $(addRemove).after(removeButton);
-            $("#field" + next).attr('data-source',$(addto).attr('data-source'));
-            $("#count").val(next);  
-            
-                $('.remove-me').click(function(e){
-                    e.preventDefault();
-                    var fieldNum = this.id.charAt(this.id.length-1);
-                    var fieldID = "#field" + fieldNum;
-                    $(this).remove();
-                    $(fieldID).remove();
-                });
-            });
-        }); */
 
         $(document).ready(function(){
+
+        $( "#form" ).keypress(function(e) {
+            if ( e.which == 13 ) {
+                e.preventDefault();
+            }
+        });
+
         var next = 1;
         $(".add-more").click(function(e){
             e.preventDefault();
@@ -100,16 +82,16 @@
             next = next + 1;
             var newIn = '<input autocomplete="off" class="input form-control2" id="ingredients' + next + '" name="ingredients[]" type="text" placeholder="Add ingredient">';
             var newInput = $(newIn);
-            var removeBtn = '<button id="remove' + (next - 1) + '" class="btn btn-danger remove-me" >-</button></div><div id="field">';
+            var removeBtn = '<button id="remove' + (next - 1) + '" class="btn btn-danger remove-me" >-</button>';
             var removeButton = $(removeBtn);
             $(addto).after(newInput);
             $(addRemove).after(removeButton);
-            $("#field" + next).attr('data-source',$(addto).attr('data-source'));
+            $("#ingredients" + next).attr('data-source',$(addto).attr('data-source'));
             $("#count").val(next);  
             
                 $('.remove-me').click(function(e){
                     e.preventDefault();
-                    var fieldNum = this.id.charAt(this.id.length-1);
+                    var fieldNum = this.id.substr(this.id.lastIndexOf("e")+1);
                     var fieldID = "#ingredients" + fieldNum;
                     $(this).remove();
                     $(fieldID).remove();
@@ -117,33 +99,39 @@
             });
         });
 
+        $(document).ready(function(){
 
-/* $(document).ready(function(){
-    var next = 1;
-    $(".add-more").click(function(e){
-        e.preventDefault();
-        var addto = "#field" + next;
-        var addRemove = "#field" + (next);
-        next = next + 1;
-        var newIn = '<input autocomplete="off" class="input form-control" id="field' + next + '" name="field' + next + '" type="text">';
-        var newInput = $(newIn);
-        var removeBtn = '<button id="remove' + (next - 1) + '" class="btn btn-danger remove-me" >-</button></div><div id="field">';
-        var removeButton = $(removeBtn);
-        $(addto).after(newInput);
-        $(addRemove).after(removeButton);
-        $("#field" + next).attr('data-source',$(addto).attr('data-source'));
-        $("#count").val(next);  
-        
-            $('.remove-me').click(function(e){
+        $( "#form" ).keypress(function(e) {
+            if ( e.which == 13 ) {
                 e.preventDefault();
-                var fieldNum = this.id.charAt(this.id.length-1);
-                var fieldID = "#field" + fieldNum;
-                $(this).remove();
-                $(fieldID).remove();
-            });
-    });
+            }
+        });
 
-}); */
+        var next2 = 1;
+        $(".add-more2").click(function(e){
+            e.preventDefault();
+            var addto2 = "#method" + next2;
+            var addRemove2 = "#method" + (next2);
+            next2 = next2 + 1;
+            var newIn2 = '<input autocomplete="off" class="input form-control2" id="method' + next2 + '" name="methods[]" type="text" placeholder="Add method">';
+            var newInput2 = $(newIn2);
+            var removeBtn2 = '<button id="mremove' + (next2 - 1) + '" class="btn btn-danger remove-me2" >-</button>';
+            var removeButton2 = $(removeBtn2);
+            $(addto2).after(newInput2);
+            $(addRemove2).after(removeButton2);
+            $("#method" + next2).attr('data-source',$(addto2).attr('data-source'));
+            $("#count2").val(next2);  
+            
+                $('.remove-me2').click(function(e){
+                    e.preventDefault();
+                    var fieldNum2 = this.id.substr(this.id.lastIndexOf("e")+1);
+                    var fieldID2 = "#method" + fieldNum2;
+                    $(this).remove();
+                    $(fieldID2).remove();
+                });
+            });
+        });
+
 
     </script>
 
