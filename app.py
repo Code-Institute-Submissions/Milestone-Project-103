@@ -67,6 +67,37 @@ def edit_recipe(recipe_id):
 @app.route('/update_recipe/<recipe_id>', methods=["POST"])
 def update_recipe(recipe_id):
     recipes = mongo.db.Recipes
+
+    ingredientslist = request.form.getlist('ingredients[]')
+    if "" in ingredientslist:
+        ingredientslist.remove("")
+    methodslist = request.form.getlist('methods[]')
+    if "" in methodslist:
+        methodslist.remove("")
+    recipe_name = request.form['recipe_name']
+    yields = request.form['yield']
+    category_name = request.form['category_name']
+    equipment = request.form['equipment']
+    ingredients = ingredientslist
+    methods = methodslist
+    image = request.form['image']
+
+
+    recipes.update( {'_id': ObjectId(recipe_id)},
+    {
+        'recipe_name' : recipe_name,
+        'yield' : yields,
+        'category_name' : category_name,
+        'equipment' : equipment,
+        'ingredients' : ingredients,
+        'methods' : methods,
+        'image' : image
+    })
+    return redirect(url_for('get_recipes'))
+
+""" @app.route('/update_recipe/<recipe_id>', methods=["POST"])
+def update_recipe(recipe_id):
+    recipes = mongo.db.Recipes
     recipes.update( {'_id': ObjectId(recipe_id)},
     {
         'recipe_name': request.form.get('recipe_name'),
@@ -76,7 +107,7 @@ def update_recipe(recipe_id):
         'ingredients': request.form.getlist('ingredients'),
         'image': request.form.get('image')
     })
-    return redirect(url_for('get_recipes'))
+    return redirect(url_for('get_recipes')) """
 
 
 @app.route('/delete_recipe/<recipe_id>')

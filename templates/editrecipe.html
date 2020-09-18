@@ -48,20 +48,30 @@
                         <label class="control-label" for="ingredients1">Ingredients</label>
                         <small class="left-pad">Press + or - to add or remove an ingredient</small>
                         <div class="controls" id="profs"> 
-                            <form class="input-append">
+                            <div class="input-append">
                             {% for ingredient in recipe.ingredients %}
-                                    <input autocomplete="off" class="input form-control2" id="ingredients{{loop.index-1}}" name="ingredients[]" type="text" value="{{ingredient}}" data-items="8"/><button id="remove{{Key}}" class="btn btn-danger remove-me" >-</button>      
+                                <input autocomplete="off" class="input form-control2" id="ingredientsedit{{loop.index-1}}" name="ingredients[]" type="text" value="{{ingredient}}" data-items="8"/><button id="removeedit{{loop.index-1}}" class="btn btn-danger remove-meedit" >-</button>      
                             {% endfor %}
-                            </form>
+                                <input autocomplete="off" class="input form-control2" id="ingredientsadd1" name="ingredients[]" type="text" placeholder="Add ingredient" data-items="8"/><button id="b1" class="btn add-moreadd" type="button">+</button>       
+                            
+                            </div>
                         </div>
                     </div>
                 </div>
 
-
                 <div class="row">
-                    <div class="input-field add-recipe-field col-12">
-                        <label for="method"> Method</label>
-                        <input type="text" class="form-control" name="method" id="method" placeholder="Method">
+                    <input type="hidden" name="countmethod" value="1" />
+                    <div class="control-group add-recipe-field col-12" id="methods">
+                        <label class="control-label" for="method1">Method</label>
+                        <small class="left-pad">Press + or - to add or remove a method</small>
+                        <div class="controls" id="profs2"> 
+                            <div class="input-append">
+                                {% for method in recipe.methods %}
+                                    <input autocomplete="off" class="input form-control2" id="methodsedit{{loop.index-1}}" name="methods[]" type="text" value="{{method}}" data-items="8"/><button id="removeeditmethod{{loop.index-1}}" class="btn btn-danger remove-meeditmethods" >-</button>      
+                                {% endfor %}
+                                <input autocomplete="off" class="input form-control2" id="methodsadd1" name="methods[]" type="text" placeholder="Add method" data-items="8"/><button id="mb1" class="btn add-moreaddmethod" type="button">+</button>       
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
