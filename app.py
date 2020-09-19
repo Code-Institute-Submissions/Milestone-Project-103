@@ -19,6 +19,16 @@ def get_recipes():
     return render_template("recipes.html", recipes=mongo.db.Recipes.find())
 
 
+@app.route('/find_recipe')
+def find_recipe():
+    recipes = mongo.db.Recipes.find()
+    categories = mongo.db.Categories.find()
+    return render_template('contents.html', recipes=recipes, categories=categories)
+
+
+""" return render_template('contents.html',
+    recipe=mongo.db.Recipes.find()) """
+
 @app.route('/add_recipe')
 def add_recipe():
     return render_template('addrecipe.html',
@@ -83,7 +93,7 @@ def update_recipe(recipe_id):
     image = request.form['image']
 
 
-    recipes.update( {'_id': ObjectId(recipe_id)},
+    recipes.update({'_id': ObjectId(recipe_id)},
     {
         'recipe_name' : recipe_name,
         'yield' : yields,
@@ -94,20 +104,6 @@ def update_recipe(recipe_id):
         'image' : image
     })
     return redirect(url_for('get_recipes'))
-
-""" @app.route('/update_recipe/<recipe_id>', methods=["POST"])
-def update_recipe(recipe_id):
-    recipes = mongo.db.Recipes
-    recipes.update( {'_id': ObjectId(recipe_id)},
-    {
-        'recipe_name': request.form.get('recipe_name'),
-        'category_name': request.form.get('category_name'),
-        'yield': request.form.get('yield'),
-        'equipment': request.form.get('equipment'),
-        'ingredients': request.form.getlist('ingredients'),
-        'image': request.form.get('image')
-    })
-    return redirect(url_for('get_recipes')) """
 
 
 @app.route('/delete_recipe/<recipe_id>')
@@ -120,6 +116,43 @@ def delete_recipe(recipe_id):
 def get_categories():
     return render_template('categories.html',
     categories=mongo.db.Categories.find())
+
+
+@app.route('/edit_category/<category_id>')
+def edit_category(category_id):
+    return render_template('editcategory.html', 
+    category = mongo.db.Categories.find_one({'_id': ObjectId(category_id)}))
+
+
+@app.route('/update_category/<category_id>', methods=["POST"])
+def update_category(category_id):
+    categories = mongo.db.Categories
+    category_name = request.form['category_name']
+
+    categories.update({'_id': ObjectId(category_id)},
+    {
+        'category_name' : category_name
+    })
+    return redirect(url_for('get_categories'))
+
+
+@app.route('/delete_category/<category_id>')
+def delete_category(category_id):
+    mongo.db.Categories.remove({'_id': ObjectId(category_id)})
+    return redirect(url_for('get_categories'))
+
+
+@app.route('/add_category')
+def add_category():
+    return render_template('addcategory.html')
+
+
+@app.route('/insert_category', methods=['POST'])
+def insert_category():
+    category = mongo.db.Categories
+    category_document = {'category_name': request.form.get('category_name')}
+    category.insert_one(category_document)
+    return redirect(url_for('get_categories'))
 
 
 if __name__ == '__main__':

@@ -24,6 +24,9 @@
         <div class="row">
             <div class="navblock col-12">
                 <ul class="nav">
+                <li class="nav-item">
+                        <a class="nav-link active" href="{{ url_for('find_recipe') }}">Contents</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="{{ url_for('get_recipes') }}">Home</a>
                     </li>
@@ -32,8 +35,13 @@
                         <div class="dropdown-menu">
                         <a class="dropdown-item" href="#">Find a recipe</a>
                         <a class="dropdown-item" href="{{ url_for('add_recipe') }}">Add a recipe</a>
-                        
                         </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('add_category') }}">Add category</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('get_categories') }}">Edit categories</a>
                     </li>
                 </ul>
             </div>    
@@ -198,7 +206,7 @@
                 var addtoaddmethod = "#methodsadd" + nextmethodadd;
                 var addRemoveaddmethod = "#methodsadd" + (nextmethodadd);
                 nextmethodadd = nextmethodadd + 1;
-                var newInaddmethod = '<input autocomplete="off" class="input form-control2" id="methodsadd' + nextmethodadd + '" name="ingredients[]" type="text" placeholder="Add method">';
+                var newInaddmethod = '<input autocomplete="off" class="input form-control2" id="methodsadd' + nextmethodadd + '" name="methods[]" type="text" placeholder="Add method">';
                 var newInputaddmethod = $(newInaddmethod);
                 var removeBtnaddmethod = '<button id="removeaddmethod' + (nextmethodadd - 1) + '" class="btn btn-danger remove-meaddmethod" >-</button>';
                 var removeButtonaddmethod = $(removeBtnaddmethod);
@@ -227,7 +235,9 @@
 
         });
 
-
+        $(document).ready(function(){
+            $('.collapse').collapse()
+        });
     </script>
 
 </body>

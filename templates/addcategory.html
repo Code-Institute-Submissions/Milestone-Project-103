@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+        <h2>Add A Category</h2>
+  
+            <form action="{{ url_for('insert_category') }}" method="POST" >
+                <div class="row">
+                    <div class="input-field add-recipe-field col-12">
+                        <label for="category_name">Category name</label>
+                        <input type="text" class="form-control" name="category_name" id="category_name" placeholder="Category name">
+                    </div>
+                </div>
+                <div class="row submit-changes-btn">
+                    <button type="submit" class="btn btn-success">Submit <i class="far fa-paper-plane"></i></button>
+                </div>
+
+            </form>
+
+
+{% endblock %}
