@@ -1,7 +1,7 @@
 import pymongo
 import os
 
-MONGODB_URI = os.getenv("MONGO_URI")
+MONGODB_URI = os.environ.get("MONGO_URI")
 DBS_NAME = "MilestoneProjectThree"
 COLLECTION_NAME = "Recipes"
 
@@ -17,12 +17,11 @@ conn = mongo_connect(MONGODB_URI)
 
 coll = conn[DBS_NAME][COLLECTION_NAME]
 
-#new_doc = {'recipe_name':'test','yield':'Makes 10','equipment':'bowl'}
+new_doc = {'recipe_name':'chocolate black bean muffins','yield':'Makes 12 muffins','equipment':'blender, measuring cups and spoons, muffin tin, cooking oil spray, rubber spatula, cooling rack'}
 
-#coll.remove(new_doc)
+coll.insert_one(new_doc)
 
 documents = coll.find()
 
 for doc in documents: 
     print(doc)
-

@@ -14,20 +14,24 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 mongo = PyMongo(app)
 
 @app.route('/')
+@app.route('/find_recipe')
+def find_recipe():
+    recipes = list(mongo.db.Recipes.find())
+    categories = mongo.db.Categories.find()
+    return render_template('contents.html', recipes=recipes, categories=categories)
+
+
 @app.route('/get_recipes')
 def get_recipes():
     return render_template("recipes.html", recipes=mongo.db.Recipes.find())
 
 
-@app.route('/find_recipe')
-def find_recipe():
-    recipes = mongo.db.Recipes.find()
-    categories = mongo.db.Categories.find()
-    return render_template('contents.html', recipes=recipes, categories=categories)
+@app.route('/view_recipe/<recipe_id>')
+def view_recipe(recipe_id):
+    the_recipe = mongo.db.Recipes.find_one({"_id": ObjectId(recipe_id)})
+    all_categories = mongo.db.Categories.find()
+    return render_template('singlerecipe.html', recipe=the_recipe, categories=all_categories)
 
-
-""" return render_template('contents.html',
-    recipe=mongo.db.Recipes.find()) """
 
 @app.route('/add_recipe')
 def add_recipe():
@@ -104,7 +108,7 @@ def update_recipe(recipe_id):
         'image' : image
     })
     return redirect(url_for('get_recipes'))
-
+    
 
 @app.route('/delete_recipe/<recipe_id>')
 def delete_recipe(recipe_id):

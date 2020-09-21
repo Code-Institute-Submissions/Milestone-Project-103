@@ -104,6 +104,28 @@ li {
     font-size: 1em;
 }
 
+
+/*------------------------------------------Contents page */
+
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: linen;
+    border-bottom: 1px solid linen;
+}
+
+.btn-link {
+    font-weight: 400;
+    color: black;
+    background-color: transparent;
+}
+
+.btn-link:hover {
+    color: black;
+    background-color: transparent;
+   
+}
+
 /*------------------------------------------Forms */
 
 .add-recipe-field {

@@ -2,9 +2,7 @@
 {% block content %}
 
         <h2>Find a Recipe</h2>
-
-              <div class="accordion" id="recipesAccordion">
-                
+            <div class="accordion" id="recipesAccordion">
                 {% for category in categories %}
                 <div class="card">
                     <div class="card-header" >
@@ -16,15 +14,17 @@
                     </div>
 
                     <div id="collapseOne{{category._id}}" class="collapse" aria-labelledby="headingOne" data-parent="#recipesAccordion">
+                     
                         <div class="card-body">
-                        {% for recipe in recipes %}    
-                            {% if category.category_name == recipe.category_name %} 
+                        {% for recipe in recipes %}   
+                            {% if recipe.category_name == category.category_name %} 
                                 <div class="input-append">
-                                    <input autocomplete="off" class="input form-control2" id="recipe{{loop.index-1}}" name="recipe[]" type="text" value="{{recipe.recipe_name}}"/><button id="viewrecipe" class="btn btn-primary" >View recipe</button>      
+                                    <input autocomplete="off" class="input form-control2" id="recipe{{loop.index-1}}" name="recipe[]" type="text" value="{{recipe.recipe_name}}" readonly/>
+                                    <a href="{{url_for('view_recipe', recipe_id=recipe._id)}}" class="btn btn-light">View recipe</a>    
                                 </div> 
                             {% endif %}
-                        {% endfor %}        
-                        </div>
+                        {% endfor %}         
+                        </div>   
                     </div>
                 </div>
                 {% endfor %}
