@@ -5,12 +5,14 @@
   
             <form action="{{ url_for('update_recipe', recipe_id=recipe._id) }}" method="POST" >
                 <div class="row">
+                <!-- Edit recipe name -->
                     <div class="input-field add-recipe-field col-12">
                         <label for="recipe_name">Recipe name</label>
                         <input type="text" class="form-control" name="recipe_name" id="recipe_name" placeholder="Recipe name" value="{{recipe.recipe_name}}">
                     </div>
                 </div>
                 <div class="row">
+                <!-- Edit recipe type - if already stored show the type, if not select type from dropdown -->
                     <div class="dropdown add-recipe-field col-12">
                         <label class="type-label" for="type">Type </label>
 
@@ -29,20 +31,21 @@
                     </div>
                 </div>
                 <div class="row ">
+                <!-- Edit yield -->
                     <div class="input-field add-recipe-field col-12">
                         <label for="yield">Yield (number of servings)</label>
                         <input type="text" class="form-control" name="yield" id="yield" placeholder="Number of servings" value="{{recipe.yield}}">
                     </div>
                 </div>
                 <div class="row">
+                <!-- Edit equipment -->
                     <div class="input-field add-recipe-field col-12">
                         <label for="equipment">Implements required to make it</label>
                         <input type="text" class="form-control" name="equipment" id="equipment" placeholder="Implements required to make it" value="{{recipe.equipment}}">
                     </div>
                 </div>
-
-
                 <div class="row">
+                <!-- Edit dynamic ingredients list -->
                     <input type="hidden" name="count" value="1" />
                     <div class="control-group add-recipe-field col-12" id="fields">
                         <label class="control-label" for="ingredients1">Ingredients</label>
@@ -58,8 +61,8 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="row">
+                <!-- Edit dynamic methods list -->
                     <input type="hidden" name="countmethod" value="1" />
                     <div class="control-group add-recipe-field col-12" id="methods">
                         <label class="control-label" for="method1">Method</label>
@@ -75,6 +78,7 @@
                     </div>
                 </div>
                 <div class="row">
+                <!-- Edit image link -->
                     <div class="input-field add-recipe-field col-12">
                         <label for="image">Image link</label>
                         <input type="text" class="form-control" name="image" id="image" placeholder="Recipe image" value="{{recipe.image}}">

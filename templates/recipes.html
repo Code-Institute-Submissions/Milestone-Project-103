@@ -4,6 +4,7 @@
 
 
     <div class="row">
+    <!-- Recipe name and buttons for editing and deleting the recipe -->
         <div class="col-12">
             <h2>
                 {{recipe.recipe_name}}
@@ -14,15 +15,18 @@
             <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="btn btn-light">Delete recipe</a>
         </div>
     </div>
-    <div class="row">         
+    <div class="row"> 
+    <!-- Recipe category and yield -->        
         <div class="col-md-6">
             <p>{{recipe.category_name}} recipe, {{recipe.yield}}</p>
         </div>
+        <!-- Recipe image when viewed on smaller screens -->
         <div class="col-md-6 d-block d-md-none image">
             <img src="{{recipe.image}}" alt="Recipe image">
         </div>  
     </div>
-    <div class="row">         
+    <div class="row">  
+    <!-- Recipe equipment and ingredients list -->       
         <div class="col-md-6">        
             <h3>Equipment required</h3>
             <p>{{recipe.equipment}}</p> 
@@ -33,12 +37,14 @@
             {% endfor %}
             </ul>
         </div>
+        <!-- Recipe image when viewed on larger screens -->
         <div class="col-md-6 d-none d-md-block image">
             <img src="{{recipe.image}}" alt="Recipe image">
         </div> 
     </div>
 
     <div class="row">
+    <!-- Recipe method list -->
         <div class="col-sm">
         <h3>Method</h3>
             <ol>

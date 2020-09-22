@@ -2,7 +2,7 @@
 {% block content %}
 
         <h2>Edit A Category</h2>
-  
+  <!-- Edit the chosen category -->
             <form action="{{ url_for('update_category', category_id=category._id) }}" method="POST" >
                 <div class="row">
                     <div class="input-field add-recipe-field col-12">
