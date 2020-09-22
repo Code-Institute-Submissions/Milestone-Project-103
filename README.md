@@ -62,21 +62,21 @@ Images are loaded as weblinks
 
 ### Desktop/tablet
 
-[Recipe Page Design](../blob/master/wireframes/Wireframe-DesktopTablet-recipeview.jpg)
-Contents Page Design - https://github.com/littlemonkee/Milestone-Project-3/blob/master/wireframes/Wireframe-DesktopTablet-contentspage.jpg
-Add Recipe - https://github.com/littlemonkee/Milestone-Project-3/blob/master/wireframes/Wireframe-DesktopTablet-add_recipe.jpg
-Add Category - https://github.com/littlemonkee/Milestone-Project-3/blob/master/wireframes/Wireframe-DesktopTablet-addcategory.jpg
-Edit Category (list of categories to choose from) - https://github.com/littlemonkee/Milestone-Project-3/blob/master/wireframes/Wireframe-DesktopTablet-editcategory1.jpg
-Edit Category (edit the chosen category) - https://github.com/littlemonkee/Milestone-Project-3/blob/master/wireframes/Wireframe-DesktopTablet-editcategory2.jpg
+- [Recipe Page Design](../blob/master/wireframes/Wireframe-DesktopTablet-recipeview.jpg)
+- [Contents Page Design](../blob/master/wireframes/Wireframe-DesktopTablet-contentspage.jpg)
+- [Add Recipe](../blob/master/wireframes/Wireframe-DesktopTablet-add_recipe.jpg)
+- [Add Category](../blob/master/wireframes/Wireframe-DesktopTablet-addcategory.jpg)
+- [Edit Category (list of categories to choose from)](../blob/master/wireframes/Wireframe-DesktopTablet-editcategory1.jpg)
+- [Edit Category (edit the chosen category)](../blob/master/wireframes/Wireframe-DesktopTablet-editcategory2.jpg)
 
 ### Mobile
 
-Recipe Page Design - https://github.com/littlemonkee/Milestone-Project-3/blob/master/wireframes/Wireframe-Mobile-recipeview.jpg
-Contents Page Design - https://github.com/littlemonkee/Milestone-Project-3/blob/master/wireframes/Wireframe-Mobile-contentspage.jpg
-Add Recipe - https://github.com/littlemonkee/Milestone-Project-3/blob/master/wireframes/Wireframe-Mobile-add_recipe.jpg
-Add Category - https://github.com/littlemonkee/Milestone-Project-3/blob/master/wireframes/Wireframe-Mobile-addcategory.jpg
-Edit Category (list of categories to choose from) - https://github.com/littlemonkee/Milestone-Project-3/blob/master/wireframes/Wireframe-Mobile-editcategory1.jpg
-Edit Category (edit the chosen category) - https://github.com/littlemonkee/Milestone-Project-3/blob/master/wireframes/Wireframe-Mobile-editcategory2.jpg
+- [Recipe Page Design](../blob/master/wireframes/Wireframe-Mobile-recipeview.jpg)
+- [Contents Page Design](../blob/master/wireframes/Wireframe-Mobile-contentspage.jpg)
+- [Add Recipe](../blob/master/wireframes/Wireframe-Mobile-add_recipe.jpg)
+- [Add Category](../blob/master/wireframes/Wireframe-Mobile-addcategory.jpg)
+- [Edit Category (list of categories to choose from)](../blob/master/wireframes/Wireframe-Mobile-editcategory1.jpg)
+- [Edit Category (edit the chosen category)](../blob/master/wireframes/Wireframe-Mobile-editcategory2.jpg)
 
 
 ## Technolgies Used
