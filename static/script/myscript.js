@@ -157,7 +157,7 @@ $(document).ready(function(){
 
 /* Contents page accordion */
 
-    $('.collapse').collapse() 
+    /* $('.collapse').collapse()  */
 
 
 

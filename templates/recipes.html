@@ -15,9 +15,16 @@
         </div>
     </div>
     <div class="row">         
-        <div class="col-6">
+        <div class="col-md-6">
             <p>{{recipe.category_name}} recipe, {{recipe.yield}}</p>
-            <h3>Equipment required to make it</h3>
+        </div>
+        <div class="col-md-6 d-block d-md-none image">
+            <img src="{{recipe.image}}" alt="Recipe image">
+        </div>  
+    </div>
+    <div class="row">         
+        <div class="col-md-6">        
+            <h3>Equipment required</h3>
             <p>{{recipe.equipment}}</p> 
             <h3>Ingredients</h3>
             <ul>
@@ -26,7 +33,7 @@
             {% endfor %}
             </ul>
         </div>
-        <div class="col-6">
+        <div class="col-md-6 d-none d-md-block image">
             <img src="{{recipe.image}}" alt="Recipe image">
         </div> 
     </div>

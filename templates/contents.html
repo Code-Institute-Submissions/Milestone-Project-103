@@ -19,7 +19,7 @@
                         {% for recipe in recipes %}   
                             {% if recipe.category_name == category.category_name %} 
                                 <div class="input-append">
-                                    <input autocomplete="off" class="input form-control2" id="recipe{{loop.index-1}}" name="recipe[]" type="text" value="{{recipe.recipe_name}}" readonly/>
+                                    <input autocomplete="off" class="input form-control2 contents-recipe-name" id="recipe{{loop.index-1}}" name="recipe[]" type="text" value="{{recipe.recipe_name}}" readonly/>
                                     <a href="{{url_for('view_recipe', recipe_id=recipe._id)}}" class="btn btn-light">View recipe</a>    
                                 </div> 
                             {% endif %}

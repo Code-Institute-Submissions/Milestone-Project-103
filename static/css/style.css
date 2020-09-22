@@ -31,27 +31,15 @@ h3 {
     padding-left: 20px;
     padding-top: 20px;
 }
-/*
-h4 {
-    font-family: 'Nunito', sans-serif;
-    font-weight: 400;
-    color: #245076;
-}
-
-h5,
-h6 {
-    font-family: 'Nunito', sans-serif;
-    font-weight: 300;
-}
-*/
 
 
 /*------------------------------------------Heading */
 
 .header {
-    padding-left: 50px;
-    padding-top: 10px;
+    /* padding-left: 50px; */
+    padding-top: 10px; 
     height: 100px;
+    width: 100%;
     background-color: linen;
     z-index: 1;
 }
@@ -78,7 +66,70 @@ a:hover {
     text-decoration: underline;
 }
 
+.navigation {
+    background-color: linen;
+}
+
+#nav {
+    margin: 10px;
+}
+
+#nav li {
+    font-size: 14px;
+    padding: 00px;
+}
+
+.navbar-nav li {
+    padding: 10px;
+}
+
+.navbar {
+    padding: 10px;
+}
+
+.navbar-small {
+    width: 100%;
+    background-color: linen;
+    padding: 5px 15px 5px 15px;
+}
+
+.navbar-large {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.navbar-light .navbar-toggler .navbar-toggler-icon {
+    color: black;
+    border-color: black;
+    width: 30px;
+    height: 30px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: black;
+}
+
+.bg-dark {
+    background-color: linen!important;
+}
+.navbar-brand {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    padding-left: 0px;
+    margin: 0;
+}
+
+
 /*------------------------------------------Section */
+
+.container {
+    width: 100%!important;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 0;
+    margin-left: 0; 
+}
 
 .main {
     margin-top: 30px;
@@ -88,7 +139,7 @@ a:hover {
 }
 
 img {
-    width: 400px;
+    width: 400px; 
     padding-left: 20px;
     padding-right: 30px;
 }
@@ -192,21 +243,69 @@ li {
 /*------------------------------------------Media Queries */
 
 
-@media screen and (max-width: 320px) {
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    img {
+        max-width: 250px;
+        padding-left: 20px;
+        padding-right: 30px;
+    }
+    h1 {
+        font-size: 32px;
+    }
+    h2 {
+        font-size: 26px;
+    }
+    .flex-col {
+        flex: 100%;
+        max-width: 100%;
+    }
+    .contents-recipe-name {
+        width: 100%!important;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    img {
+        width: 350px;
+        padding-left: 20px;
+        padding-right: 30px;
+    }
+    .flex-col {
+        flex: 100%;
+        max-width: 100%;
+    }
+    .container {
+        max-width: 1000px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    img {
+        width: 350px;
+        padding-left: 20px;
+        padding-right: 30px;
+    }
+    .container {
+        max-width: 1000px;
+    }
+    .main {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .container {
+        max-width: 1800px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 
 }
 
-
-@media screen and (max-width: 767px) {
-
-}
-
-
-@media screen and (max-width: 1023px) {
-
-}
-
-
-@media screen and (max-width: 1023px) and (min-width: 768px) {
-    
-}
