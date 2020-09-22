@@ -2,17 +2,16 @@
 {% block content %}
 
         <h2>Add A Recipe</h2>
-  
             <form action="{{ url_for('insert_recipe') }}" method="POST" >
                 <div class="row">
-                <!-- Add recipe name -->
+                    <!-- Add recipe name -->
                     <div class="input-field add-recipe-field col-12">
                         <label for="recipe_name">Recipe name</label>
                         <input type="text" class="form-control" name="recipe_name" id="recipe_name" placeholder="Recipe name">
                     </div>
                 </div>
                 <div class="row">
-                <!-- Select recipe type from categories held in the database -->
+                    <!-- Select recipe type from categories held in the database -->
                     <div class="dropdown add-recipe-field col-12">
                         <label class="type-label" for="type">Type </label>
 
@@ -27,21 +26,21 @@
                     </div>
                 </div>
                 <div class="row ">
-                <!-- Recipe yield -->
+                    <!-- Recipe yield -->
                     <div class="input-field add-recipe-field col-12">
                         <label for="yield">Yield (number of servings)</label>
                         <input type="text" class="form-control" name="yield" id="yield" placeholder="Number of servings">
                     </div>
                 </div>
                 <div class="row">
-                <!-- Equipment required to make it -->
+                    <!-- Equipment required to make it -->
                     <div class="input-field add-recipe-field col-12">
                         <label for="equipment">Equipment required</label>
                         <input type="text" class="form-control" name="equipment" id="equipment" placeholder="Implements required to make it">
                     </div>
                 </div>
                 <div class="row">
-                <!-- Dynamic ingredients list -->
+                    <!-- Dynamic ingredients list -->
                     <input type="hidden" name="count" value="1" />
                     <div class="control-group add-recipe-field col-12" id="ingredients">
                         <label class="control-label" for="ingredients1">Ingredients</label>
@@ -54,7 +53,7 @@
                     </div>
                 </div>
                 <div class="row">
-                <!-- Dynamic method list -->
+                    <!-- Dynamic method list -->
                     <input type="hidden" name="count2" value="1" />
                     <div class="control-group add-recipe-field col-12" id="methods">
                         <label class="control-label" for="method1">Method</label>
@@ -67,7 +66,7 @@
                     </div>
                 </div>
                 <div class="row">
-                <!-- Image link -->
+                    <!-- Image link -->
                     <div class="input-field add-recipe-field col-12">
                         <label for="image">Image link</label>
                         <input type="text" class="form-control" name="image" id="image" placeholder="Recipe image">
@@ -76,8 +75,6 @@
                 <div class="row submit-changes-btn">
                     <button type="submit" class="btn btn-success">Submit <i class="far fa-paper-plane"></i></button>
                 </div>
-
             </form>
-
 
 {% endblock %}

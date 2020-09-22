@@ -151,7 +151,7 @@ If I were extending my project I would add further steps to the Delete process t
 As the Site Owner I want to make it easy for site users to find recipes, e.g. applying a category to each recipe which supports some kind of search/find functionality (drinks, savoury snacks, sweet snacks for example).
 - The Contents/Find a Recipe page is the 'Home' page of the site.  This is a simple accordion style page.  Testing proved that all recipes for each category would be listed as expected.  Clicking the View Recipe button will take the user through to a page to see that individual recipe.  Each accordion section opens one at a time to reduce the size of the full list if the 'recipe book' becomes quite large.
 
-### Site Users
+4. Site User results
 
 As a **first time** Site User I want the site to be easy to use, easy to understand and easy to navigate, in particular I want it to be mobile or tablet friendly so that I can easily access it when I am in my kitchen from portable devices.
 - I tested general use of my site on one other person (due to Covid). Their feedback was that it is easy to navigate and the purpose of each page is easy to understand.  

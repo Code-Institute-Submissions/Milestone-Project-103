@@ -1,8 +1,7 @@
 $(document).ready(function(){
 
 
-/* Ingredients fields on addrecipe */
-
+    /* Ingredients fields on addrecipe */
     $( "#form" ).keypress(function(e) {
         if ( e.which == 13 ) {
             e.preventDefault();
@@ -34,8 +33,7 @@ $(document).ready(function(){
     });
 
 
-/* Add/remove additional ingredients fields on edit recipe page */ 
-
+    /* Add/remove additional ingredients fields on edit recipe page */ 
     $( "#form" ).keypress(function(e) {
         if ( e.which == 13 ) {
             e.preventDefault();
@@ -67,8 +65,7 @@ $(document).ready(function(){
     });
 
 
-/* Remove ingredients fields already presented on editrecipe page */
-
+    /* Remove ingredients fields already presented on editrecipe page */
     $('.remove-meedit').click(function(e){
         e.preventDefault();
         var fieldNum = this.id.substr(this.id.lastIndexOf("t")+1);
@@ -78,8 +75,7 @@ $(document).ready(function(){
     });
 
 
-/* Method fields on addrecipe */
-
+    /* Method fields on addrecipe */
     $( "#form" ).keypress(function(e) {
         if ( e.which == 13 ) {
             e.preventDefault();
@@ -111,8 +107,7 @@ $(document).ready(function(){
     });
 
 
-/* Add/remove additional method fields on edit recipe page  */
-
+    /* Add/remove additional method fields on edit recipe page  */
     $( "#form" ).keypress(function(e) {
         if ( e.which == 13 ) {
             e.preventDefault();
@@ -144,8 +139,7 @@ $(document).ready(function(){
     });
 
 
-/* Remove method fields already presented on editrecipe page */
-
+    /* Remove method fields already presented on editrecipe page */
     $('.remove-meeditmethods').click(function(e){
         e.preventDefault();
         var fieldNum = this.id.substr(this.id.lastIndexOf("d")+1);
@@ -153,13 +147,5 @@ $(document).ready(function(){
         $(this).remove();
         $(fieldID).remove();
     });
-
-
-/* Contents page accordion */
-
-    /* $('.collapse').collapse()  */
-
-
-
 
 });

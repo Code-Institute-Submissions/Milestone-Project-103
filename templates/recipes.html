@@ -2,9 +2,8 @@
 {% block content %}
     {% for recipe in recipes %}
 
-
     <div class="row">
-    <!-- Recipe name and buttons for editing and deleting the recipe -->
+        <!-- Recipe name and buttons for editing and deleting the recipe -->
         <div class="col-12">
             <h2>
                 {{recipe.recipe_name}}
@@ -16,7 +15,7 @@
         </div>
     </div>
     <div class="row"> 
-    <!-- Recipe category and yield -->        
+        <!-- Recipe category and yield -->        
         <div class="col-md-6">
             <p>{{recipe.category_name}} recipe, {{recipe.yield}}</p>
         </div>
@@ -26,7 +25,7 @@
         </div>  
     </div>
     <div class="row">  
-    <!-- Recipe equipment and ingredients list -->       
+        <!-- Recipe equipment and ingredients list -->       
         <div class="col-md-6">        
             <h3>Equipment required</h3>
             <p>{{recipe.equipment}}</p> 
@@ -42,9 +41,8 @@
             <img src="{{recipe.image}}" alt="Recipe image">
         </div> 
     </div>
-
     <div class="row">
-    <!-- Recipe method list -->
+        <!-- Recipe method list -->
         <div class="col-sm">
         <h3>Method</h3>
             <ol>
