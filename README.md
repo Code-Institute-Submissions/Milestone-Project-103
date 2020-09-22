@@ -62,7 +62,7 @@ Images are loaded as weblinks
 
 ### Desktop/tablet
 
-[Recipe Page Design] - (../blob/master/wireframes/Wireframe-DesktopTablet-recipeview.jpg)
+[Recipe Page Design](../blob/master/wireframes/Wireframe-DesktopTablet-recipeview.jpg)
 Contents Page Design - https://github.com/littlemonkee/Milestone-Project-3/blob/master/wireframes/Wireframe-DesktopTablet-contentspage.jpg
 Add Recipe - https://github.com/littlemonkee/Milestone-Project-3/blob/master/wireframes/Wireframe-DesktopTablet-add_recipe.jpg
 Add Category - https://github.com/littlemonkee/Milestone-Project-3/blob/master/wireframes/Wireframe-DesktopTablet-addcategory.jpg
