@@ -46,7 +46,7 @@ Each of the special fonts chosen are clear and easy to read keeping accessibilit
 
 ### Imagery
 
-Images are loaded as weblinks. Images are taken 
+Images are loaded as weblinks. Images were found via Google and taken from other public recipe books.  Credits for images are listed in the "Credits" section below.
 
 
 ## Features
@@ -90,13 +90,13 @@ Images are loaded as weblinks. Images are taken
 
 ### Frameworks, Libraries and Programs
 
-* Bootstrap and Font Awesome
-* MongoDB
-* Flask
-* Google Fonts
-* Git and Github
-* MS Paint
-* Heroku
+* Bootstrap and Font Awesome - these were used for the page layouts, app responsiveness across devices, buttons and button icons
+* MongoDB - this is the database that holds my data documents about categories and recipes
+* Flask - this is the framework or 'code library' I used in my app. It provides pre-written code for common operations that I could simply reuse for doing things like configuring my application, creating routes, and interacting with the mongodb database  
+* Google Fonts - this was used for styling the heading fonts
+* Git and Github - these were used for keeping a remote backup of my work, for version control between my local files and remote files and supported deployment to Heroku
+* MS Paint - this was used for drawing my wireframes 
+* Heroku - this was used as the platform through which to deploy my app to share the finished product with other people
 
 
 ## Project Management
@@ -134,19 +134,28 @@ Test passed.
 3. Site Owner results
 
 As the Site Owner I want to be able to create recipes on my site so that I can share them with my friends.
-- Using the Add a Recipe page, all pieces of recipe information can be added into the form and upon submission all are stored in the mongo database.  
-- The form is easy to use and considered user-friendly by the one other person I was able to test it on.  
+- Using the Add a Recipe page, all pieces of recipe information can be added into the form and upon submission all are stored in the mongo database.  The user knows their addition has been successful as they are redirected to the view recipes page and can see their added recipe there.
+- The form is easy to use and considered user-friendly by the one other person I was able to test it on (due to Covid restrictions).  
+- [Recipes before](../blob/master/testing/recipes1.jpg)
+- [Recipes after](../blob/master/testing/recipes2.jpg)
 
 As the Site Owner I want to be able to update recipes that are already on my site, e.g. due to spelling mistakes, missing information or to generally improve them over time.
-- This form is of the same layout as the add recipe form and so it was also deemed easy to use by my human test subject.  All data pulled through from mongodb as expected and updated back to mongodb as required.
+- This form is of the same layout as the add recipe form and so it was also deemed easy to use by my human test subject.  All data pulled through from mongodb as expected when choosing a specific recipe to edit, and updated back to mongodb as required.  The user can see their changes have taken place as they are redirected to the view recipes page and can see their changes reflected there.
 
 As the Site Owner I want to be able to delete recipes from my site.
-- Upon clicking the Delete button the recipe is immediately deleted from my site and mongodb.  If I were to extend this project I would perhaps add another step to make sure the user meant to click the button. 
+- Upon clicking the Delete button the recipe is immediately deleted from my site and mongodb.  This is evidenced to the user again by redirecting them to the view recipes page where they can no longer see the recipe they have deleted.  If I were to extend this project I would perhaps add another step to make sure the user meant to click the button. 
 
 As the Site Owner I want to be able to manage the categories - this should include creating new categories, updating categories and deleting categories,
 - All CRUD operations on categories were tested and passed testing as being easy to understand and simple to do - the relevant categories showing on the initial edit page and if editing the category (due to spelling error for example) the second page the site owner is taken to enables that one category to be amended with the change being process back to mongodb immediately.
-- Again, testing proved that if the site owner clicks the Delete button the category is immediately deleted from mongodb.  This would have repercussions for the system as a whole as the site owner could currently delete a category which is in use in existing recipes, there is no checking procedure following the clicking of the Delete button to stop a category being deleted if currently in use.  This could impact on the Contents page and recipe editing functionality. 
+- Again, testing proved that if the site owner clicks the Delete button the category is immediately deleted from mongodb as the user is redirected to the "edit categories" page where they can no longer see the category.  This would have repercussions for the system as a whole as the site owner could currently delete a category which is in use in existing recipes, there is no checking procedure following the clicking of the Delete button to stop a category being deleted if currently in use.  This could impact on the Contents page and recipe editing functionality. 
 If I were extending my project I would add further steps to the Delete process to ensure categories which are in use in the Recipes in mongodb cannot be deleted.
+- [Categories before](../blob/master/testing/categories1.jpg)
+- [Categories after adding a category - screen feedback](../blob/master/testing/categories2.jpg)
+- [Categories after adding a category - database feedback](../blob/master/testing/categories3.jpg)
+- [Cateories after editing a category - screen feedback](../blob/master/testing/categories4.jpg)
+- [Cateories after editing a category - database feedback](../blob/master/testing/categories5.jpg)
+- [Categories after deleting a category - screen feedback](../blob/master/testing/categories6.jpg)
+- [Categories after deleting a category - database feedback](../blob/master/testing/categories7.jpg)
 
 As the Site Owner I want to make it easy for site users to find recipes, e.g. applying a category to each recipe which supports some kind of search/find functionality (drinks, savoury snacks, sweet snacks for example).
 - The Contents/Find a Recipe page is the 'Home' page of the site.  This is a simple accordion style page.  Testing proved that all recipes for each category would be listed as expected.  Clicking the View Recipe button will take the user through to a page to see that individual recipe.  Each accordion section opens one at a time to reduce the size of the full list if the 'recipe book' becomes quite large.
@@ -156,7 +165,7 @@ As the Site Owner I want to make it easy for site users to find recipes, e.g. ap
 As a **first time** Site User I want the site to be easy to use, easy to understand and easy to navigate, in particular I want it to be mobile or tablet friendly so that I can easily access it when I am in my kitchen from portable devices.
 - I tested general use of my site on one other person (due to Covid). Their feedback was that it is easy to navigate and the purpose of each page is easy to understand.  
 - I tested the responsiveness of the site via the Developer Tools in Google and then by testing the site through toggling the device toolbar.  The site resizes accordingly for all devices, including the change in location of the recipe image.
-- Safari, Firefox, Chrome...
+- The site rendered as expected when tested on Safari, Firefox and Chrome.
 
 As a **first time or returning** Site User I want to be able to view recipes in a way that helps me decide which recipe I fancy making, e.g. something sweet or something savory.
 - My tester confirmed that using the Contents/Find a Recipe page was very straight forward and did indeed allow him to select by category and pick a specific recipe.
@@ -178,27 +187,30 @@ There are no known bugs remaining in this site following testing.
 
 ## Deployment
 
-### GitHub Pages
-
-I deployed my project to GitHub Pages as follows...
-
-1. Create a Repository in Github and use the Code Institute Full Template when doing so. 
-2. Open the Repository and using the green Gitpod button, open my repository in a Gitpod workspace. 
-3. In a Gitpod Terminal the standard Git CLI commands can be used to check the status of the local and remote repositories, add files, commit changes and push through to Github.
-
 ### Heroku
 
-I deployed to Heroku as follows:
+I deployed my project to Heroku as follows:
 
-1. Create an app in Heroku.  
-2. In your app, under the Settings tab include your configuration variables (in Config Vars section).  This should include your IP address, Port number and Mongo URI.
-3. In your app, under the Deploy tab connect the app to your Github repository, enabling automatic deployments from your master branch.  Steps 2 and 3 should then enable deployment directly from Github pushes.
-4. You may need to run a manual deployment (under Deploy tab) and/or restart dynos to see a successful deployment.
+1. I signed up and created a new app in Heroku, giving it a name and choosing the region of Europe so that the app is delivered slightly more quickly than if I chose a server further away.  
+2. In my app, under the Settings tab I included my configuration variables (in the Config Vars section).  This includes my IP address, Port number and Mongo URI.  
+3. I then created a requirements.txt file for my application.  This file contains a list of applications needed for Heroku to run.
+4. In my app, under the Deploy tab I connected the app to my Github repository, enabling automatic deployments from my master branch.  I did not create any forks in Github.  Doing this enabled deployment directly from my code pushes to Github.
+(N.B. Initially I also logged into Heroku from my IDE terminal. After testing my application setup I discovered that git pushes were bypassing Github and going straight to Heroku. I fixed this issue by removing Heroku as a remote from my terminal - code pushed to Heroku from Github via the automation)
+5. I ran a manual deployment (under the Deploy tab) and restarted dynos to see my first successful deployment.
+6. I pushed my project files to Github regularly so that (a) my Github repository was kept up-to-date with my progress/changes, and (b) so that I deployed updates to my app regularly as I developed it through each stage.  I checked the Actions tab in Heroku to ensure the app was rebuilding when expected.  
+
+To open my app from Heroku I logged in, went into the app I had created and in the top right-hand corner of the main section of the screen I clicked the "Open app" button.
 
 
 ## Credits/Acknowledgements
 
-I acknowledge this bootsnipp site https://bootsnipp.com/snippets/kM0M for its inspiration for my dynamic user-determined form field creation for adding or removing ingredients and methods.
+### Credits
+
+I credit this bootsnipp site https://bootsnipp.com/snippets/kM0M for its inspiration for my dynamic user-determined form field creation for adding or removing ingredients and methods.
+
+I credit the following sites for use of their images:
+- https://mealplannerpro.com/member-recipes/Healthy-Oat-Smoothies-Blueberry-Muffin-Smoothie-Peach-Cobbler-399119
+
 
 My thanks go out to my mentor Aaron Sinnott for his advice and assistance in the direction and breadth of my project.  I also thank the tutors who've shared some inspirational resources and helped me understand some mongodb data access specifics.
 My thanks also go out to the community on Slack.
