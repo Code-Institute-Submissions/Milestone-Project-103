@@ -257,6 +257,9 @@ li {
     .contents-recipe-name {
         width: 100%!important;
     }
+    .container {
+        max-width: 100%;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -271,7 +274,7 @@ li {
         max-width: 100%;
     }
     .container {
-        max-width: 1000px;
+        max-width: 100%;
     }
 }
 
@@ -283,7 +286,7 @@ li {
         padding-right: 30px;
     }
     .container {
-        max-width: 1000px;
+        max-width: 100%;
     }
     .main {
         padding-left: 20px;
@@ -294,6 +297,6 @@ li {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     .container {
-        max-width: 1800px;
+        max-width: 180%;
     }
 }
